@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganpati Bappa Festival Invitation</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        #inviteButton { padding: 15px 30px; font-size: 18px; background: #ff6b35; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        #inviteButton:hover { background: #e55a2b; }
+        #message { margin-top: 30px; font-size: 20px; color: #333; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <button id="inviteButton">🐘 Click for Ganpati Invitation 🐘</button>
+    <div id="message"></div>
+    <audio id="audio" src="ganpati_audio.mp3"></audio>
+
+    <script>
+        document.getElementById('inviteButton').onclick = function() {
+            document.getElementById('message').innerHTML = "🙏 Ganpati Bappa Morya! 🙏<br><br>You are cordially invited to celebrate<br>the auspicious festival of Lord Ganesha<br><br>🌺 Join us for prayers, festivities, and blessings 🌺";
+            document.getElementById('audio').play().catch(e => console.log('Audio play failed:', e));
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उरुणाचा महाराजा - ५० वर्षांचा सोहळा</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff6b35">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            margin: 0;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            min-height: 100vh;
+            color: white;
+        }
+        #inviteButton { 
+            padding: 20px 40px; 
+            font-size: 20px; 
+            background: white; 
+            color: #ff6b35; 
+            border: none; 
+            border-radius: 15px; 
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 50px;
+        }
+        #inviteButton:active { transform: scale(0.95); }
+        #message { 
+            margin-top: 30px; 
+            font-size: 16px; 
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            line-height: 1.6;
+            text-align: left;
+            max-width: 90%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🕉️ श्री गणेशाय नमः 🕉️</h1>
+    <h2>उरुणाचा महाराजा</h2>
+    <button id="inviteButton">🐘 निमंत्रण वाचा 🐘</button>
+    <div id="message"></div>
+    <audio id="audio" src="ganpati_audio.mp3"></audio>
+
+    <script>
+        document.getElementById('inviteButton').onclick = function() {
+            document.getElementById('message').innerHTML = "<div style='text-align: center; margin-bottom: 20px;'><strong>श्री गणेशाय नमः</strong></div><br>आपल्या श्रद्धा, भक्ती आणि परंपरेचा अमूल्य ठेवा साजरा करत, <strong>\"उरुणाचा महाराजा\" सार्वजनिक गणेशोत्सव मंडळ</strong> आपल्या <strong>५० वर्षांच्या गौरवगाथेचा सोहळा</strong> साजरा करत आहे.<br><br>या ऐतिहासिक क्षणाचा आनंद घेण्यासाठी, आपली उपस्थिती आम्हाला अत्यंत आनंददायक ठरेल.<br><br><strong>📅 दिनांक:</strong> २६ ऑगस्ट २०२५<br><strong>📍 स्थळ:</strong> उदय चौक, उरण इस्लामपूर<br><br>आपण आपल्या कुटुंबासह उपस्थित राहून, गणेशोत्सवाच्या या भक्तिमय उत्सवाचे साक्षीदार व्हा आणि उत्साहात भर घाला! 🎉<br><br><div style='text-align: center; margin-top: 20px;'><strong>आपलंच गणेश मंडळ<br>\"उरुणाचा महाराजा\" सार्वजनिक गणेशोत्सव मंडळ<br>उरण इस्लामपूर</strong></div>";
+            document.getElementById('audio').play().catch(e => console.log('Audio play failed:', e));
+        };
+
+        // PWA Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
