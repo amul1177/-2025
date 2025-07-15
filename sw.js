@@ -2,7 +2,7 @@ const CACHE_NAME = 'ganpati-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/ganpati_audio.mp3'
+  '/mantragenesh.mp3'
 ];
 
 self.addEventListener('install', event => {
